@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-03-09T01:40:33.739Z",
-  "totalScore": 202,
-  "componentCount": 21,
-  "maxPossible": 273,
+  "timestamp": "2026-03-09T01:41:00.386Z",
+  "totalScore": 212,
+  "componentCount": 22,
+  "maxPossible": 286,
   "components": [
     {
       "name": "Accordion",
@@ -182,6 +182,16 @@
       "accessibility": 2,
       "simplicity": 2,
       "total": 9,
+      "lines": 66
+    },
+    {
+      "name": "Textarea",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 1,
+      "simplicity": 2,
+      "total": 8,
       "lines": 66
     },
     {
@@ -575,6 +585,12 @@
       "score": 202,
       "status": "keep",
       "description": "add Tag"
+    },
+    {
+      "iteration": 61,
+      "score": 212,
+      "status": "keep",
+      "description": "add Textarea"
     }
   ]
 }
