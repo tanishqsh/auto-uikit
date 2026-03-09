@@ -4,6 +4,7 @@ interface AlertProps {
   variant?: 'primary' | 'neutral' | 'danger' | 'success';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
 const Alert: React.FC<AlertProps> = ({ variant = 'primary', size = 'md', children, onClick }) => {
@@ -49,16 +50,16 @@ const Alert: React.FC<AlertProps> = ({ variant = 'primary', size = 'md', childre
 
 const __demo: React.FC = () => (
   <div>
-    <Alert variant="primary" size="sm">
+    <Alert variant="primary" size="sm" onClick={() => alert('Primary Alert clicked')}>
       This is a primary alert with small size.
     </Alert>
-    <Alert variant="neutral" size="md">
+    <Alert variant="neutral" size="md" onClick={() => alert('Neutral Alert clicked')}>
       This is a neutral alert with medium size.
     </Alert>
-    <Alert variant="danger" size="lg">
+    <Alert variant="danger" size="lg" onClick={() => alert('Danger Alert clicked')}>
       This is a danger alert with large size.
     </Alert>
-    <Alert variant="success" size="md">
+    <Alert variant="success" size="md" onClick={() => alert('Success Alert clicked')}>
       This is a success alert with medium size.
     </Alert>
   </div>
