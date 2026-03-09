@@ -14,3 +14,6 @@ cb60c27	86	keep	add Modal
 6679317	120	keep	add Skeleton
 b9d5ee8	129	keep	add Breadcrumbs
 c922d8f	139	keep	add Accordion
+96044bc	140	keep	improve Avatar
+96044bc	139	discard	improve ProgressBar — reverted
+96044bc	140	discard	improve ProgressBar — reverted

@@ -41,11 +41,13 @@ const Accordion: React.FC<AccordionProps> = ({ variant, size = 'medium', childre
         className={`w-full flex justify-between items-center ${getSizeClasses(size)} border-b focus:outline-none`}
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
+        aria-label="Toggle accordion"
+        role="button"
       >
         {children}
       </button>
       {isOpen && (
-        <div className="p-4">
+        <div className="p-4" role="region" aria-label="Accordion content">
           {/* Content goes here */}
           Additional content
         </div>

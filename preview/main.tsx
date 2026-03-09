@@ -29,7 +29,11 @@ function App() {
             <div key={name} className="border border-zinc-800 rounded-xl p-6">
               <h2 className="text-lg font-semibold mb-4 text-zinc-300">{name}</h2>
               <div className="flex flex-wrap items-center gap-3">
-                {Demo ? <Demo /> : <p className="text-zinc-600">No __demo export</p>}
+                {Demo ? (
+                  <ErrorBoundary name={name}><Demo /></ErrorBoundary>
+                ) : (
+                  <p className="text-zinc-600 text-sm">No __demo export yet</p>
+                )}
               </div>
             </div>
           ))}
