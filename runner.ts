@@ -168,17 +168,32 @@ Requirements:
 
 Return ONLY the complete .tsx file content. No explanations.`;
     } else {
-      // Improve weakest component
-      // Find lowest scoring
+      // Improve weakest component — parse eval output for scores
       const evalOutput = await runEval();
-      const scoreLines = evalOutput.output.split("\n").filter((l) => l.includes("  "));
-      // Just pick a random existing component to improve
-      targetComponent = existing[Math.floor(Math.random() * existing.length)];
+      const lines = evalOutput.output.split("\n");
+      let weakest = { name: "", score: Infinity };
+      for (const line of lines) {
+        const parts = line.trim().split(/\s+/);
+        if (parts.length >= 7 && existing.includes(parts[0])) {
+          const total = parseInt(parts[6]);
+          if (!isNaN(total) && total < weakest.score) {
+            weakest = { name: parts[0], score: total };
+          }
+        }
+      }
+      targetComponent = weakest.name || existing[Math.floor(Math.random() * existing.length)];
       action = "improve";
 
       const currentCode = await readFile(join(COMPONENTS_DIR, `${targetComponent}.tsx`), "utf-8");
-      prompt = `Here is a React component. Improve it — add more variants, better accessibility (aria attributes, role, keyboard handlers), or simplify the code. Keep it under 70 lines if possible.
+      const hasDemo = /export\s+(?:const|function)\s+__demo/.test(currentCode);
 
+      let extraInstruction = "";
+      if (!hasDemo) {
+        extraInstruction = `\nCRITICAL: This component is MISSING a __demo export. You MUST add: export const __demo = () => (...) that renders 3+ variants of the component.\n`;
+      }
+
+      prompt = `Here is a React component. Improve it — add more variants, better accessibility (aria attributes, role, keyboard handlers), or simplify the code. Keep it under 70 lines if possible.
+${extraInstruction}
 Current code:
 \`\`\`tsx
 ${currentCode}
