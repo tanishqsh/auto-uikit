@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-03-09T01:55:27.437Z",
-  "totalScore": 298,
+  "timestamp": "2026-03-09T04:09:18.316Z",
+  "totalScore": 299,
   "componentCount": 30,
   "maxPossible": 390,
   "components": [
@@ -226,12 +226,12 @@
     },
     {
       "name": "Stepper",
-      "compiles": 0,
+      "compiles": 1,
       "exports": 1,
       "variants": 3,
       "accessibility": 1,
       "simplicity": 2,
-      "total": 7,
+      "total": 8,
       "lines": 59
     },
     {
@@ -819,6 +819,1182 @@
     {
       "iteration": 86,
       "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 87,
+      "score": 299,
+      "status": "keep",
+      "description": "improve RadioGroup"
+    },
+    {
+      "iteration": 88,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 89,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 90,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 91,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 92,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 93,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 94,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 95,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 96,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 97,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 98,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 99,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 100,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 101,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 102,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 103,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 104,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 105,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 106,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 107,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 108,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 109,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 110,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 111,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 112,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 113,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 114,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 115,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 116,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 117,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 118,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 119,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 120,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 121,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 122,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 123,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 124,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 125,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 126,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 127,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 128,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 129,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 130,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 131,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 132,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 133,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 134,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 135,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 136,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 137,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 138,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 139,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 140,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 141,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 142,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 143,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 144,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 145,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 146,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 147,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 148,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 149,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 150,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 151,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 152,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 153,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 154,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 155,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 156,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 157,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 158,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 159,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 160,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 161,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 162,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 163,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 164,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 165,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 166,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 167,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 168,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 169,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 170,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 171,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 172,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 173,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 174,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 175,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 176,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 177,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 178,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 179,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 180,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 181,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 182,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 183,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 184,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 185,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 186,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 187,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 188,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 189,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 190,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 191,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 192,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 193,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 194,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 195,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 196,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 197,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 198,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 199,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 200,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 201,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 202,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 203,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 204,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 205,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 206,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 207,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 208,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 209,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 210,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 211,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 212,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 213,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 214,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 215,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 216,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 217,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 218,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 219,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 220,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 221,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 222,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 223,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 224,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 225,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 226,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 227,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 228,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 229,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 230,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 231,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 232,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 233,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 234,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 235,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 236,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 237,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 238,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 239,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 240,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 241,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 242,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 243,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 244,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 245,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 246,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 247,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 248,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 249,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 250,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 251,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 252,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 253,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 254,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 255,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 256,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 257,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 258,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 259,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 260,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 261,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 262,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 263,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 264,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 265,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 266,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 267,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 268,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 269,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 270,
+      "score": 296,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 271,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 272,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 273,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 274,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 275,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 276,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 277,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 278,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 279,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 280,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 281,
+      "score": 299,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 282,
+      "score": 299,
       "status": "discard",
       "description": "improve RadioGroup — reverted"
     }
