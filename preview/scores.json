@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-03-09T01:46:18.110Z",
-  "totalScore": 295,
+  "timestamp": "2026-03-09T01:47:19.290Z",
+  "totalScore": 296,
   "componentCount": 30,
   "maxPossible": 390,
   "components": [
@@ -89,10 +89,10 @@
       "compiles": 1,
       "exports": 0,
       "variants": 0,
-      "accessibility": 1,
+      "accessibility": 2,
       "simplicity": 2,
-      "total": 4,
-      "lines": 52
+      "total": 5,
+      "lines": 60
     },
     {
       "name": "Divider",
@@ -737,6 +737,18 @@
       "score": 295,
       "status": "keep",
       "description": "improve AvatarGroup"
+    },
+    {
+      "iteration": 73,
+      "score": 296,
+      "status": "keep",
+      "description": "improve Checkbox"
+    },
+    {
+      "iteration": 74,
+      "score": 296,
+      "status": "discard",
+      "description": "improve Checkbox — reverted"
     }
   ]
 }

@@ -35,7 +35,7 @@ const Timeline: React.FC<TimelineProps> = ({ variant = 'primary', size = 'medium
 
   return (
     <div
-      className={`rounded-lg shadow-sm transition-all duration-200 ${getSizeClass(size)} ${getColorClass(variant)}`
+      className={`rounded-lg shadow-sm transition-all duration-200 ${getSizeClass(size)} ${getColorClass(variant)}`}
       role="list"
       aria-label="Timeline"
     >
