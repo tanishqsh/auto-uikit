@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-03-09T01:44:30.879Z",
-  "totalScore": 291,
+  "timestamp": "2026-03-09T01:45:44.096Z",
+  "totalScore": 293,
   "componentCount": 30,
   "maxPossible": 390,
   "components": [
@@ -179,10 +179,10 @@
       "compiles": 1,
       "exports": 0,
       "variants": 0,
-      "accessibility": 0,
-      "simplicity": 2,
-      "total": 3,
-      "lines": 65
+      "accessibility": 3,
+      "simplicity": 1,
+      "total": 5,
+      "lines": 87
     },
     {
       "name": "Skeleton",
@@ -719,6 +719,18 @@
       "score": 291,
       "status": "keep",
       "description": "add Timeline"
+    },
+    {
+      "iteration": 70,
+      "score": 293,
+      "status": "keep",
+      "description": "improve RadioGroup"
+    },
+    {
+      "iteration": 71,
+      "score": 293,
+      "status": "discard",
+      "description": "improve AvatarGroup — reverted"
     }
   ]
 }

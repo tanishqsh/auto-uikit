@@ -24,7 +24,7 @@ const AvatarGroup: React.FC<AvatarGroupProps> = ({ variant, size = 'md', childre
   };
 
   return (
-    <div className="flex items-center space-x-2 rounded-lg shadow-sm transition-all duration-200" aria-label="Avatar Group">
+    <div className="flex items-center space-x-2 rounded-lg shadow-sm transition-all duration-200" role="group" aria-label="Avatar Group">
       {React.Children.map(children, (child, index) => (
         <Avatar
           key={index}
@@ -41,22 +41,22 @@ const AvatarGroup: React.FC<AvatarGroupProps> = ({ variant, size = 'md', childre
 
 const __demo: React.FC = () => (
   <div className="flex flex-col space-y-4">
-    <AvatarGroup variant="primary">
+    <AvatarGroup variant="primary" role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && alert('Primary clicked')}>
       <Avatar initials="AB" />
       <Avatar initials="CD" />
       <Avatar initials="EF" />
     </AvatarGroup>
-    <AvatarGroup variant="neutral">
+    <AvatarGroup variant="neutral" role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && alert('Neutral clicked')}>
       <Avatar initials="GH" />
       <Avatar initials="IJ" />
       <Avatar initials="KL" />
     </AvatarGroup>
-    <AvatarGroup variant="danger">
+    <AvatarGroup variant="danger" role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && alert('Danger clicked')}>
       <Avatar initials="MN" />
       <Avatar initials="OP" />
       <Avatar initials="QR" />
     </AvatarGroup>
-    <AvatarGroup variant="success">
+    <AvatarGroup variant="success" role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && alert('Success clicked')}>
       <Avatar initials="ST" />
       <Avatar initials="UV" />
       <Avatar initials="WX" />
