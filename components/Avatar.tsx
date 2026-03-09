@@ -8,29 +8,20 @@ interface AvatarProps {
 
 const Avatar: React.FC<AvatarProps> = ({ variant, size = 'medium', children }) => {
   const getColorClass = (variant: AvatarProps['variant']) => {
-    switch (variant) {
-      case 'primary':
-        return 'bg-blue-500 text-white';
-      case 'neutral':
-        return 'bg-slate-500 text-white';
-      case 'danger':
-        return 'bg-red-500 text-white';
-      case 'success':
-        return 'bg-green-500 text-white';
-      default:
-        return 'bg-slate-500 text-white';
-    }
+    return {
+      primary: 'bg-blue-500 text-white',
+      neutral: 'bg-slate-500 text-white',
+      danger: 'bg-red-500 text-white',
+      success: 'bg-green-500 text-white',
+    }[variant] || 'bg-slate-500 text-white';
   };
 
   const getSizeClass = (size: AvatarProps['size']) => {
-    switch (size) {
-      case 'small':
-        return 'w-8 h-8 text-xs';
-      case 'large':
-        return 'w-12 h-12 text-lg';
-      default:
-        return 'w-10 h-10 text-base';
-    }
+    return {
+      small: 'w-8 h-8 text-xs',
+      large: 'w-12 h-12 text-lg',
+      medium: 'w-10 h-10 text-base',
+    }[size] || 'w-10 h-10 text-base';
   };
 
   return (
@@ -40,6 +31,8 @@ const Avatar: React.FC<AvatarProps> = ({ variant, size = 'medium', children }) =
       )} ${getSizeClass(size)}`}
       role="img"
       aria-label="Avatar"
+      tabIndex={0}
+      onKeyPress={(e) => e.key === 'Enter' && alert('Avatar clicked')}
     >
       {children}
     </div>
