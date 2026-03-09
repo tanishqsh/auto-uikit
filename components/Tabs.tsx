@@ -25,11 +25,11 @@ const Tabs: React.FC<TabsProps> = ({ variant, size = 'medium', children }) => {
   const getSize = (size: TabsProps['size']) => {
     switch (size) {
       case 'small':
-        return 'px-2 py-1';
+        return 'px-2 py-1 text-xs';
       case 'large':
-        return 'px-4 py-2';
+        return 'px-4 py-2 text-base';
       default:
-        return 'px-3 py-1.5';
+        return 'px-3 py-1.5 text-sm';
     }
   };
 
