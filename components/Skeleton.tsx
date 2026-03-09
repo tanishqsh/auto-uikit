@@ -40,6 +40,8 @@ const Skeleton: React.FC<SkeletonProps> = ({ variant = 'primary', size = 'medium
       className={`${getVariantClass(variant)} rounded-lg shadow-sm transition-all duration-200`}
       role="alert"
       aria-label="Loading"
+      tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && alert('Skeleton clicked')}
     >
       {children}
     </div>
