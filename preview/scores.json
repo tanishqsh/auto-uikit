@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-03-09T01:42:19.753Z",
-  "totalScore": 242,
-  "componentCount": 25,
-  "maxPossible": 325,
+  "timestamp": "2026-03-09T01:42:48.813Z",
+  "totalScore": 248,
+  "componentCount": 26,
+  "maxPossible": 338,
   "components": [
     {
       "name": "Accordion",
@@ -33,6 +33,16 @@
       "simplicity": 2,
       "total": 10,
       "lines": 51
+    },
+    {
+      "name": "AvatarGroup",
+      "compiles": 1,
+      "exports": 0,
+      "variants": 0,
+      "accessibility": 1,
+      "simplicity": 2,
+      "total": 4,
+      "lines": 68
     },
     {
       "name": "Badge",
@@ -639,6 +649,12 @@
       "score": 242,
       "status": "keep",
       "description": "add Pagination"
+    },
+    {
+      "iteration": 65,
+      "score": 248,
+      "status": "keep",
+      "description": "add AvatarGroup"
     }
   ]
 }
