@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-03-09T01:43:40.822Z",
-  "totalScore": 270,
-  "componentCount": 28,
-  "maxPossible": 364,
+  "timestamp": "2026-03-09T01:44:05.943Z",
+  "totalScore": 281,
+  "componentCount": 29,
+  "maxPossible": 377,
   "components": [
     {
       "name": "Accordion",
@@ -133,6 +133,16 @@
       "simplicity": 2,
       "total": 6,
       "lines": 58
+    },
+    {
+      "name": "KBD",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 2,
+      "simplicity": 2,
+      "total": 9,
+      "lines": 65
     },
     {
       "name": "Modal",
@@ -687,6 +697,12 @@
       "score": 270,
       "status": "keep",
       "description": "add EmptyState"
+    },
+    {
+      "iteration": 68,
+      "score": 281,
+      "status": "keep",
+      "description": "add KBD"
     }
   ]
 }
