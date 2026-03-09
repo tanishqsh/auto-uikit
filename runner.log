@@ -251,3 +251,15 @@ Error: ENOENT: no such file or directory, open 'components/Toggle / Switch.tsx'
   syscall: 'open',
   path: 'components/Toggle / Switch.tsx'
 }
+📊 Running baseline eval...
+📊 Baseline: 147 points, 15 components
+
+════════════════════════════════════════════════════════════
+🔄 Iteration 1/Infinity
+════════════════════════════════════════════════════════════
+🎯 Adding: Checkbox
+🤖 Querying Qwen...
+📝 Wrote components/Checkbox.tsx (52 lines)
+📊 Running eval...
+📊 Score: 153 (was 147)
+✅ KEEP (+6)
