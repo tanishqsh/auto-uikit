@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 
-// Auto-import all component demos
-const modules = import.meta.glob("../components/*.tsx", { eager: true }) as Record<
+// Auto-import all component demos (lazy — broken files won't crash the app)
+const moduleLoaders = import.meta.glob("../components/*.tsx") as Record<
   string,
-  { default: React.ComponentType; __demo?: React.ComponentType }
+  () => Promise<{ default: React.ComponentType; __demo?: React.ComponentType }>
 >;
 
 interface ComponentScore {
@@ -172,9 +172,17 @@ function Dashboard({ scores }: { scores: ScoresData }) {
   );
 }
 
+interface LoadedComponent {
+  name: string;
+  Demo?: React.ComponentType;
+  Component?: React.ComponentType;
+  error?: string;
+}
+
 function App() {
   const [scores, setScores] = useState<ScoresData | null>(null);
   const [tab, setTab] = useState<"dashboard" | "components">("dashboard");
+  const [components, setComponents] = useState<LoadedComponent[]>([]);
 
   useEffect(() => {
     const load = () => {
@@ -184,16 +192,28 @@ function App() {
         .catch(() => {});
     };
     load();
-    const interval = setInterval(load, 10000); // refresh every 10s
+    const interval = setInterval(load, 10000);
     return () => clearInterval(interval);
   }, []);
 
-  const components = Object.entries(modules)
-    .map(([path, mod]) => {
-      const name = path.replace("../components/", "").replace(".tsx", "");
-      return { name, Demo: mod.__demo, Component: mod.default };
-    })
-    .sort((a, b) => a.name.localeCompare(b.name));
+  useEffect(() => {
+    async function loadAll() {
+      const entries = Object.entries(moduleLoaders);
+      const loaded: LoadedComponent[] = [];
+      for (const [path, loader] of entries) {
+        const name = path.replace("../components/", "").replace(".tsx", "");
+        try {
+          const mod = await loader();
+          loaded.push({ name, Demo: mod.__demo, Component: mod.default });
+        } catch (e: any) {
+          loaded.push({ name, error: e.message || "Failed to load" });
+        }
+      }
+      loaded.sort((a, b) => a.name.localeCompare(b.name));
+      setComponents(loaded);
+    }
+    loadAll();
+  }, []);
 
   return (
     <div className="min-h-screen bg-zinc-950 text-white p-6 md:p-8">
@@ -223,11 +243,13 @@ function App() {
 
         {tab === "components" && (
           <div className="space-y-8">
-            {components.map(({ name, Demo }) => (
+            {components.map(({ name, Demo, error }) => (
               <div key={name} className="border border-zinc-800 rounded-xl p-6">
                 <h2 className="text-lg font-semibold mb-4 text-zinc-300">{name}</h2>
                 <div className="flex flex-wrap items-start gap-3 max-h-64 overflow-auto">
-                  {Demo ? (
+                  {error ? (
+                    <p className="text-red-400 text-sm">⚠️ Syntax error — will be fixed next iteration</p>
+                  ) : Demo ? (
                     <ErrorBoundary name={name}><Demo /></ErrorBoundary>
                   ) : (
                     <p className="text-zinc-600 text-sm">No __demo export yet</p>

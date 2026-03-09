@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-03-09T01:48:48.101Z",
-  "totalScore": 297,
+  "timestamp": "2026-03-09T01:55:27.437Z",
+  "totalScore": 298,
   "componentCount": 30,
   "maxPossible": 390,
   "components": [
@@ -89,10 +89,10 @@
       "compiles": 1,
       "exports": 0,
       "variants": 0,
-      "accessibility": 2,
+      "accessibility": 3,
       "simplicity": 2,
-      "total": 5,
-      "lines": 60
+      "total": 6,
+      "lines": 70
     },
     {
       "name": "Divider",
@@ -761,6 +761,66 @@
       "score": 296,
       "status": "discard",
       "description": "improve Checkbox — reverted"
+    },
+    {
+      "iteration": 77,
+      "score": 298,
+      "status": "keep",
+      "description": "improve Checkbox"
+    },
+    {
+      "iteration": 78,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 79,
+      "score": 297,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 80,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 81,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 82,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 83,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 84,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 85,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 86,
+      "score": 298,
+      "status": "discard",
+      "description": "improve RadioGroup — reverted"
     }
   ]
 }

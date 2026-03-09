@@ -35,7 +35,7 @@ const Stepper: React.FC<StepperProps> = ({ variant, size, children }) => {
       role="stepper"
       className={`rounded-lg shadow-sm transition-all duration-200 ${getColorClass(
         variant
-      )} ${getSizeClass(size)}`
+      )} ${getSizeClass(size)}`}
     >
       {children}
     </div>
