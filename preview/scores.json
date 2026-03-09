@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-03-09T01:39:21.810Z",
-  "totalScore": 169,
-  "componentCount": 18,
-  "maxPossible": 234,
+  "timestamp": "2026-03-09T01:39:46.427Z",
+  "totalScore": 180,
+  "componentCount": 19,
+  "maxPossible": 247,
   "components": [
     {
       "name": "Accordion",
@@ -143,6 +143,16 @@
       "simplicity": 2,
       "total": 6,
       "lines": 60
+    },
+    {
+      "name": "Spinner",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 2,
+      "simplicity": 2,
+      "total": 9,
+      "lines": 61
     },
     {
       "name": "Tabs",
@@ -527,6 +537,12 @@
       "score": 169,
       "status": "keep",
       "description": "add Toast"
+    },
+    {
+      "iteration": 58,
+      "score": 180,
+      "status": "keep",
+      "description": "add Spinner"
     }
   ]
 }
