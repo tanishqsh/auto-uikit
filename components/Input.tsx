@@ -24,6 +24,13 @@ const Input: React.FC<InputProps> = ({ variant, size = 'md', children }) => {
     <input
       className={`rounded-lg shadow-sm transition-all duration-200 ${variantClass} ${sizeClass}`}
       aria-label="Input"
+      role="textbox"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') {
+          console.log('Enter pressed');
+        }
+      }}
     >
       {children}
     </input>
@@ -32,16 +39,16 @@ const Input: React.FC<InputProps> = ({ variant, size = 'md', children }) => {
 
 const __demo: React.FC = () => (
   <div>
-    <Input variant="primary" size="sm">
+    <Input variant="primary" size="sm" aria-label="Primary Small">
       Primary Small
     </Input>
-    <Input variant="neutral" size="md">
+    <Input variant="neutral" size="md" aria-label="Neutral Medium">
       Neutral Medium
     </Input>
-    <Input variant="danger" size="lg">
+    <Input variant="danger" size="lg" aria-label="Danger Large">
       Danger Large
     </Input>
-    <Input variant="success" size="md">
+    <Input variant="success" size="md" aria-label="Success Medium">
       Success Medium
     </Input>
   </div>
