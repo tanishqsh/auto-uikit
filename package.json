@@ -1,0 +1,19 @@
+{
+  "name": "auto-uikit",
+  "version": "1.0.0",
+  "description": "Autonomous UI kit builder. A local Qwen model creates React + Tailwind components in a loop — eval scores them, keeps the good ones, discards the bad.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^25.3.5",
+    "@types/react": "^19.2.14",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
