@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-03-09T04:15:12.409Z",
-  "totalScore": 300,
+  "timestamp": "2026-03-09T04:36:38.050Z",
+  "totalScore": 301,
   "componentCount": 30,
   "maxPossible": 390,
   "components": [
@@ -299,10 +299,10 @@
       "compiles": 1,
       "exports": 0,
       "variants": 0,
-      "accessibility": 2,
+      "accessibility": 3,
       "simplicity": 2,
-      "total": 5,
-      "lines": 67
+      "total": 6,
+      "lines": 70
     }
   ],
   "history": [
@@ -2003,6 +2003,72 @@
       "score": 334,
       "status": "keep",
       "description": "improve[rewrite] Tabs"
+    },
+    {
+      "iteration": 284,
+      "score": 336,
+      "status": "keep",
+      "description": "improve[rewrite] Tooltip"
+    },
+    {
+      "iteration": 285,
+      "score": 336,
+      "status": "discard",
+      "description": "improve[rewrite] Alert — all candidates failed"
+    },
+    {
+      "iteration": 286,
+      "score": 336,
+      "status": "discard",
+      "description": "improve[rewrite] Alert — all candidates failed"
+    },
+    {
+      "iteration": 287,
+      "score": 336,
+      "status": "discard",
+      "description": "improve[rewrite] Alert — all candidates failed"
+    },
+    {
+      "iteration": 288,
+      "score": 336,
+      "status": "discard",
+      "description": "improve[rewrite] Alert — all candidates failed"
+    },
+    {
+      "iteration": 289,
+      "score": 336,
+      "status": "discard",
+      "description": "improve[rewrite] Alert — all candidates failed"
+    },
+    {
+      "iteration": 290,
+      "score": 336,
+      "status": "discard",
+      "description": "improve[add-features] Alert — all candidates failed"
+    },
+    {
+      "iteration": 291,
+      "score": 336,
+      "status": "discard",
+      "description": "improve[add-features] Alert — all candidates failed"
+    },
+    {
+      "iteration": 292,
+      "score": 336,
+      "status": "discard",
+      "description": "improve[add-features] Alert — all candidates failed"
+    },
+    {
+      "iteration": 293,
+      "score": 336,
+      "status": "discard",
+      "description": "improve[add-features] Alert — all candidates failed"
+    },
+    {
+      "iteration": 294,
+      "score": 336,
+      "status": "discard",
+      "description": "improve[add-features] Alert — all candidates failed"
     }
   ]
 }

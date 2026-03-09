@@ -148,6 +148,9 @@ function Dashboard({ scores }: { scores: ScoresData }) {
               <th className="pb-2 font-medium text-center">Var</th>
               <th className="pb-2 font-medium text-center">A11y</th>
               <th className="pb-2 font-medium text-center">Simp</th>
+              <th className="pb-2 font-medium text-center">Anim</th>
+              <th className="pb-2 font-medium text-center">Dark</th>
+              <th className="pb-2 font-medium text-center">Intv</th>
               <th className="pb-2 font-medium text-center">Total</th>
               <th className="pb-2 font-medium text-center">Lines</th>
             </tr>
@@ -161,7 +164,10 @@ function Dashboard({ scores }: { scores: ScoresData }) {
                 <td className={`py-1.5 text-center ${c.variants === 3 ? "text-green-400" : c.variants > 0 ? "text-yellow-400" : "text-red-400"}`}>{c.variants}/3</td>
                 <td className={`py-1.5 text-center ${c.accessibility === 3 ? "text-green-400" : c.accessibility > 0 ? "text-yellow-400" : "text-red-400"}`}>{c.accessibility}/3</td>
                 <td className={`py-1.5 text-center ${c.simplicity === 3 ? "text-green-400" : c.simplicity > 0 ? "text-yellow-400" : "text-red-400"}`}>{c.simplicity}/3</td>
-                <td className="py-1.5 text-center font-bold">{c.total}/11</td>
+                <td className={`py-1.5 text-center ${(c as any).animations ? "text-green-400" : "text-zinc-600"}`}>{(c as any).animations ?? 0}</td>
+                <td className={`py-1.5 text-center ${(c as any).darkMode ? "text-green-400" : "text-zinc-600"}`}>{(c as any).darkMode ?? 0}</td>
+                <td className={`py-1.5 text-center ${(c as any).interactive ? "text-green-400" : "text-zinc-600"}`}>{(c as any).interactive ?? 0}</td>
+                <td className="py-1.5 text-center font-bold">{c.total}/14</td>
                 <td className="py-1.5 text-center text-zinc-500">{c.lines}</td>
               </tr>
             ))}
@@ -246,7 +252,7 @@ function App() {
             {components.map(({ name, Demo, error }) => (
               <div key={name} className="border border-zinc-800 rounded-xl p-6">
                 <h2 className="text-lg font-semibold mb-4 text-zinc-300">{name}</h2>
-                <div className="flex flex-wrap items-start gap-3 max-h-64 overflow-auto">
+                <div className="flex flex-wrap items-start gap-3 max-h-48 overflow-auto p-3 bg-zinc-900/50 rounded-lg w-full">
                   {error ? (
                     <p className="text-red-400 text-sm">⚠️ Syntax error — will be fixed next iteration</p>
                   ) : Demo ? (

@@ -1,11 +1,9 @@
 /**
- * Reads results.tsv and eval output to produce score data for the dashboard.
- * Called by the runner after each iteration to update scores.json
+ * Reads results.tsv and eval output to produce score data for the dashboard (v2).
  */
 
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, writeFile, readdir } from "node:fs/promises";
 import { buildSync } from "esbuild";
-import { readdir } from "node:fs/promises";
 import { join } from "node:path";
 
 interface ComponentScore {
@@ -15,6 +13,9 @@ interface ComponentScore {
   variants: number;
   accessibility: number;
   simplicity: number;
+  animations: number;
+  darkMode: number;
+  interactive: number;
   total: number;
   lines: number;
 }
@@ -57,12 +58,26 @@ function scoreSimplicity(lines: number): number {
   return 0;
 }
 
+function checkAnimations(content: string): number {
+  const patterns = [/transition-/, /duration-/, /animate-/, /hover:scale/, /hover:opacity/, /active:scale/, /transform/, /motion/];
+  return patterns.filter((p) => p.test(content)).length >= 2 ? 1 : 0;
+}
+
+function checkDarkMode(content: string): number {
+  return /dark:/.test(content) ? 1 : 0;
+}
+
+function checkInteractive(content: string): number {
+  const patterns = [/useState/, /onClick/, /onChange/, /onToggle/, /onClose/, /onSelect/];
+  return patterns.filter((p) => p.test(content)).length >= 2 ? 1 : 0;
+}
+
 export async function generateScores(): Promise<void> {
   const componentsDir = "components";
   let files: string[] = [];
   try {
     files = (await readdir(componentsDir)).filter((f) => f.endsWith(".tsx")).sort();
-  } catch { }
+  } catch {}
 
   const components: ComponentScore[] = [];
 
@@ -80,12 +95,14 @@ export async function generateScores(): Promise<void> {
     const variants = hasDemo ? countVariants(content, componentName) : 0;
     const accessibility = checkAccessibility(content);
     const simplicity = scoreSimplicity(lines);
-    const total = compiles + exports + variants + accessibility + simplicity;
+    const animations = checkAnimations(content);
+    const darkMode = checkDarkMode(content);
+    const interactive = checkInteractive(content);
+    const total = compiles + exports + variants + accessibility + simplicity + animations + darkMode + interactive;
 
-    components.push({ name, compiles, exports, variants, accessibility, simplicity, total, lines });
+    components.push({ name, compiles, exports, variants, accessibility, simplicity, animations, darkMode, interactive, total, lines });
   }
 
-  // Parse results.tsv for history
   const history: ScoresData["history"] = [];
   try {
     const tsv = await readFile("results.tsv", "utf-8");
@@ -94,7 +111,7 @@ export async function generateScores(): Promise<void> {
       const [, score, status, desc] = line.split("\t");
       history.push({ iteration: i + 1, score: parseInt(score) || 0, status: status || "", description: desc || "" });
     });
-  } catch { }
+  } catch {}
 
   const bonus = components.length * 2;
   const componentScore = components.reduce((s, c) => s + c.total, 0);
@@ -103,7 +120,7 @@ export async function generateScores(): Promise<void> {
     timestamp: new Date().toISOString(),
     totalScore: componentScore + bonus,
     componentCount: components.length,
-    maxPossible: components.length * 13, // 11 + 2 bonus
+    maxPossible: components.length * 14 + bonus,
     components,
     history,
   };
@@ -111,5 +128,4 @@ export async function generateScores(): Promise<void> {
   await writeFile("preview/scores.json", JSON.stringify(data, null, 2));
 }
 
-// Run standalone
 generateScores().catch(console.error);
