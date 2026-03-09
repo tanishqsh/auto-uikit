@@ -6,7 +6,7 @@ interface AlertProps {
   children: React.ReactNode;
 }
 
-const Alert: React.FC<AlertProps> = ({ variant = 'primary', size = 'md', children }) => {
+const Alert: React.FC<AlertProps> = ({ variant = 'primary', size = 'md', children, onClick }) => {
   const getVariantClasses = () => {
     switch (variant) {
       case 'primary':
@@ -36,7 +36,7 @@ const Alert: React.FC<AlertProps> = ({ variant = 'primary', size = 'md', childre
   };
 
   return (
-    <div className={`${getVariantClasses()} ${getSizeClasses()} flex items-center`} role="alert">
+    <div className={`${getVariantClasses()} ${getSizeClasses()} flex items-center`} role="alert" aria-live="assertive" tabIndex={0} onClick={onClick}>
       <span className="flex-shrink-0">
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" role="img" aria-hidden="true">
           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12h2v4h-2zm0 6h2v2h-2z" clipRule="evenodd" />
