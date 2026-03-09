@@ -117,6 +117,15 @@ function sleep(ms: number): Promise<void> {
   return new Promise((r) => setTimeout(r, ms));
 }
 
+function fixCommonQwenBugs(code: string): string {
+  // Fix: className={`...`\n      role= → className={`...`}\n      role=
+  // Qwen often forgets the closing } after template literal in className
+  return code.replace(
+    /className=\{(`[^`]*`)\s*\n(\s*)(role=|aria-|onClick|onKey|tabIndex|id=|style=)/g,
+    'className={$1}\n$2$3'
+  );
+}
+
 function extractCodeBlock(response: string): string {
   // Extract code from markdown code blocks
   const match = response.match(/```(?:tsx|jsx|typescript|react)?\n([\s\S]*?)```/);
@@ -218,7 +227,9 @@ Return ONLY the improved complete .tsx file. No explanations.`;
     const response = await queryQwen(prompt);
     const code = extractCodeBlock(response);
 
-    if (!code || code.length < 20) {
+    const fixedCode = fixCommonQwenBugs(code);
+
+    if (!fixedCode || fixedCode.length < 20) {
       console.log("❌ Qwen returned empty/invalid code. Skipping.");
       await logResult(getShortHash(), currentScore, "skip", `${action} ${targetComponent} — empty response`);
       continue;
@@ -226,7 +237,7 @@ Return ONLY the improved complete .tsx file. No explanations.`;
 
     // Write component
     const filePath = join(COMPONENTS_DIR, `${targetComponent}.tsx`);
-    await writeFile(filePath, code);
+    await writeFile(filePath, fixedCode);
     console.log(`📝 Wrote ${filePath} (${code.split("\n").length} lines)`);
 
     // Eval
