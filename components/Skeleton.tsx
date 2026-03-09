@@ -38,6 +38,7 @@ const Skeleton: React.FC<SkeletonProps> = ({ variant = 'primary', size = 'medium
   return (
     <div
       className={`${getVariantClass(variant)} rounded-lg shadow-sm transition-all duration-200`}
+      role="alert"
       aria-label="Loading"
     >
       {children}
