@@ -476,3 +476,54 @@
 12:39:49 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
 12:39:49 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
 12:40:23 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:40:23 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:41:12 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:41:13 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:41:49 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:41:50 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:41:50 AM [vite] (client) hmr invalidate /components/Alert.tsx Could not Fast Refresh ("__demo" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:41:50 AM [vite] (client) hmr update /preview/main.tsx
+12:41:50 AM [vite] (client) hmr invalidate /preview/main.tsx Could not Fast Refresh ("true" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:41:50 AM [vite] (client) page reload preview/main.tsx
+12:42:26 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:42:26 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:43:05 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:43:05 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:43:41 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:43:41 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:44:17 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:44:17 AM [vite] (client) hmr invalidate /components/Alert.tsx Could not Fast Refresh ("__demo" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:44:17 AM [vite] (client) hmr update /preview/main.tsx
+12:44:17 AM [vite] (client) hmr invalidate /preview/main.tsx Could not Fast Refresh ("true" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:44:17 AM [vite] (client) page reload preview/main.tsx
+12:44:17 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:44:18 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:44:57 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:44:57 AM [vite] (client) hmr invalidate /components/Alert.tsx Could not Fast Refresh ("__demo" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:44:57 AM [vite] (client) hmr update /preview/main.tsx
+12:44:57 AM [vite] (client) hmr invalidate /preview/main.tsx Could not Fast Refresh ("true" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:44:57 AM [vite] (client) page reload preview/main.tsx
+12:44:57 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:44:57 AM [vite] (client) hmr invalidate /components/Alert.tsx Could not Fast Refresh ("__demo" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:44:57 AM [vite] (client) hmr update /preview/main.tsx
+
+  VITE v7.3.1  ready in 174 ms
+
+  ➜  Local:   http://localhost:4200/
+  ➜  Network: http://10.0.0.209:4200/
+12:46:12 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:46:12 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:46:12 AM [vite] (client) hmr invalidate /components/Alert.tsx Could not Fast Refresh ("__demo" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:46:12 AM [vite] (client) hmr update /preview/main.tsx
+12:46:12 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:46:12 AM [vite] (client) hmr invalidate /components/Alert.tsx Could not Fast Refresh ("__demo" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:46:12 AM [vite] (client) hmr update /preview/main.tsx
+12:46:12 AM [vite] (client) hmr invalidate /preview/main.tsx Could not Fast Refresh ("true" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:46:12 AM [vite] (client) page reload preview/main.tsx
+12:46:52 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:46:52 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:47:28 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:47:28 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:47:32 AM [vite] (client) hmr update /preview/main.tsx, /preview/styles.css
+12:47:40 AM [vite] (client) hmr update /preview/styles.css
+12:47:44 AM [vite] (client) hmr update /preview/main.tsx, /preview/styles.css

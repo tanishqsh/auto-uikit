@@ -252,7 +252,7 @@ function App() {
             {components.map(({ name, Demo, error }) => (
               <div key={name} className="border border-zinc-800 rounded-xl p-6">
                 <h2 className="text-lg font-semibold mb-4 text-zinc-300">{name}</h2>
-                <div className="flex flex-wrap items-start gap-3 max-h-48 overflow-auto p-3 bg-zinc-900/50 rounded-lg w-full">
+                <div className="demo-container flex flex-wrap items-start gap-3 max-h-48 overflow-hidden p-3 bg-zinc-900/50 rounded-lg w-full" style={{ contain: "paint" }}>
                   {error ? (
                     <p className="text-red-400 text-sm">⚠️ Syntax error — will be fixed next iteration</p>
                   ) : Demo ? (

@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+/* Prevent component demos from breaking out of their container */
+.demo-container > * {
+  max-width: 100% !important;
+  max-height: 12rem !important;
+  overflow: hidden !important;
+}

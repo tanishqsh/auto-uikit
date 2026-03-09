@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-03-09T04:38:33.839Z",
-  "totalScore": 301,
+  "timestamp": "2026-03-09T04:46:12.140Z",
+  "totalScore": 305,
   "componentCount": 30,
   "maxPossible": 390,
   "components": [
@@ -22,7 +22,7 @@
       "accessibility": 3,
       "simplicity": 2,
       "total": 6,
-      "lines": 68
+      "lines": 69
     },
     {
       "name": "Avatar",
@@ -37,12 +37,12 @@
     {
       "name": "AvatarGroup",
       "compiles": 1,
-      "exports": 0,
-      "variants": 0,
-      "accessibility": 3,
-      "simplicity": 2,
-      "total": 6,
-      "lines": 68
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 2,
+      "simplicity": 3,
+      "total": 10,
+      "lines": 40
     },
     {
       "name": "Badge",
@@ -2073,6 +2073,30 @@
     {
       "iteration": 295,
       "score": 336,
+      "status": "discard",
+      "description": "improve[mimic-best] Alert — all candidates failed"
+    },
+    {
+      "iteration": 296,
+      "score": 341,
+      "status": "keep",
+      "description": "improve[mimic-best] Alert"
+    },
+    {
+      "iteration": 297,
+      "score": 341,
+      "status": "discard",
+      "description": "improve[mimic-best] Alert — all candidates failed"
+    },
+    {
+      "iteration": 298,
+      "score": 341,
+      "status": "discard",
+      "description": "improve[mimic-best] Alert — all candidates failed"
+    },
+    {
+      "iteration": 299,
+      "score": 341,
       "status": "discard",
       "description": "improve[mimic-best] Alert — all candidates failed"
     }
