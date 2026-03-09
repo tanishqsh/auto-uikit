@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-03-09T01:38:07.226Z",
-  "totalScore": 147,
-  "componentCount": 15,
-  "maxPossible": 195,
+  "timestamp": "2026-03-09T01:38:30.384Z",
+  "totalScore": 153,
+  "componentCount": 16,
+  "maxPossible": 208,
   "components": [
     {
       "name": "Accordion",
@@ -73,6 +73,16 @@
       "simplicity": 2,
       "total": 9,
       "lines": 59
+    },
+    {
+      "name": "Checkbox",
+      "compiles": 1,
+      "exports": 0,
+      "variants": 0,
+      "accessibility": 1,
+      "simplicity": 2,
+      "total": 4,
+      "lines": 52
     },
     {
       "name": "Dropdown",
@@ -479,6 +489,12 @@
       "score": 147,
       "status": "discard",
       "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 55,
+      "score": 153,
+      "status": "keep",
+      "description": "add Checkbox"
     }
   ]
 }
