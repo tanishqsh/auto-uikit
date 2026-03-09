@@ -7,7 +7,7 @@ interface CheckboxProps {
 }
 
 const Checkbox: React.FC<CheckboxProps> = ({ variant = 'primary', size = 'md', children }) => {
-  const [checked,setChecked]=useState(false);
+  const [checked, setChecked] = useState(false);
 
   const colorClass = {
     primary: 'text-blue-600 border-blue-600 bg-blue-50 focus:ring-blue-500',
@@ -23,11 +23,11 @@ const Checkbox: React.FC<CheckboxProps> = ({ variant = 'primary', size = 'md', c
   }[size];
 
   return (
-    <label className={`inline-flex items-center ${sizeClass} cursor-pointer ${colorClass}`}>
+    <label className={`inline-flex items-center ${sizeClass} cursor-pointer ${colorClass}`} role="checkbox" aria-checked={checked}>
       <input
         type="checkbox"
         checked={checked}
-        onChange={() =>setChecked(!checked)}
+        onChange={() => setChecked(!checked)}
         className="hidden"
         aria-label="checkbox"
       />
@@ -40,10 +40,18 @@ const Checkbox: React.FC<CheckboxProps> = ({ variant = 'primary', size = 'md', c
 const __demo: React.FC = () => {
   return (
     <div>
-      <Checkbox variant="primary" size="sm">Primary Small</Checkbox>
-      <Checkbox variant="neutral" size="md">Neutral Medium</Checkbox>
-      <Checkbox variant="danger" size="lg">Danger Large</Checkbox>
-      <Checkbox variant="success" size="sm">Success Small</Checkbox>
+      <Checkbox variant="primary" size="sm" aria-label="Primary Small Checkbox">
+        Primary Small
+      </Checkbox>
+      <Checkbox variant="neutral" size="md" aria-label="Neutral Medium Checkbox">
+        Neutral Medium
+      </Checkbox>
+      <Checkbox variant="danger" size="lg" aria-label="Danger Large Checkbox">
+        Danger Large
+      </Checkbox>
+      <Checkbox variant="success" size="sm" aria-label="Success Small Checkbox">
+        Success Small
+      </Checkbox>
     </div>
   );
 };
