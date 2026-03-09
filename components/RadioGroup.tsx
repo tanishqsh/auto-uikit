@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface RadioGroupProps {
   variant?: 'primary' | 'neutral' | 'danger' | 'success';
@@ -36,28 +36,50 @@ const RadioGroup: React.FC<RadioGroupProps> = ({ variant = 'primary', size = 'md
   };
 
   return (
-    <div className={`rounded-lg shadow-sm transition-all duration-200 ${getSizeClasses()} ${getVariantClasses()}`}>
+    <div
+      role="group"
+      aria-label="Button group"
+      className={`inline-flex rounded-lg shadow-sm transition-all duration-200 ${getSizeClasses()} ${getVariantClasses()}`}
+    >
       {children}
     </div>
   );
 };
 
-const __demo = () => {
+const RadioButton: React.FC<{ value: string; checked: boolean; onChange: (value: string) => void }> = ({
+  value,
+  checked,
+  onChange,
+}) => {
+  const handleClick = () => {
+    onChange(value);
+  };
+
   return (
-    <div>
-      <RadioGroup variant="primary" size="sm">
-        Primary
-      </RadioGroup>
-      <RadioGroup variant="neutral" size="md">
-        Neutral
-      </RadioGroup>
-      <RadioGroup variant="danger" size="lg">
-        Danger
-      </RadioGroup>
-      <RadioGroup variant="success" size="sm">
-        Success
-      </RadioGroup>
-    </div>
+    <button
+      type="button"
+      role="radio"
+      aria-checked={checked}
+      aria-label={`Select ${value}`}
+      onClick={handleClick}
+      className={`flex items-center justify-center rounded-l-lg border p-2 transition-colors ${
+        checked ? 'bg-blue-500 text-white' : 'bg-slate-100 text-slate-900'
+      }`}
+    >
+      {checked && <span className="w-4 h-4 bg-white rounded-full"></span>}
+    </button>
+  );
+};
+
+const __demo = () => {
+  const [selectedValue, setSelectedValue] = useState<string | null>(null);
+
+  return (
+    <RadioGroup>
+      <RadioButton value="Option 1" checked={selectedValue === 'Option 1'} onChange={setSelectedValue} />
+      <RadioButton value="Option 2" checked={selectedValue === 'Option 2'} onChange={setSelectedValue} />
+      <RadioButton value="Option 3" checked={selectedValue === 'Option 3'} onChange={setSelectedValue} />
+    </RadioGroup>
   );
 };
 
