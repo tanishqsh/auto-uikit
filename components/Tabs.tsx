@@ -46,13 +46,13 @@ const Tabs: React.FC<TabsProps> = ({ variant, size = 'medium', children }) => {
 
 const __demo = () => (
   <div>
-    <Tabs variant="primary" size="small">
+    <Tabs variant="primary" size="small" role="tab" aria-selected="true" tabIndex={0} onKeyDown={() => {}}>
       Primary Tab
     </Tabs>
-    <Tabs variant="neutral" size="medium">
+    <Tabs variant="neutral" size="medium" role="tab" aria-selected="false" tabIndex={-1} onKeyDown={() => {}}>
       Neutral Tab
     </Tabs>
-    <Tabs variant="danger" size="large">
+    <Tabs variant="danger" size="large" role="tab" aria-selected="false" tabIndex={-1} onKeyDown={() => {}}>
       Danger Tab
     </Tabs>
   </div>
