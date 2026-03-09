@@ -22,8 +22,9 @@ const Badge: React.FC<BadgeProps> = ({ variant, size = 'md', children }) => {
 
   return (
     <span
-      className={`inline-flex items-center justify-center rounded-lg shadow-sm transition-all duration-200 ${sizeClass[size]} ${colorClass[variant]} aria-label="badge" role="status"}`
-      aria-label={children.toString()}
+      className={`inline-flex items-center justify-center rounded-lg shadow-sm transition-all duration-200 ${sizeClass[size]} ${colorClass[variant]}`}
+      role="status"
+      aria-label={children?.toString()}
     >
       {children}
     </span>
