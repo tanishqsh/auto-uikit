@@ -217,3 +217,28 @@ g: Tabs
 ════════════════════════════════════════════════════════════
 🎯 Improving: Tabs
 🤖 Querying Qwen...
+📊 Running baseline eval...
+📊 Baseline: 147 points, 15 components
+
+════════════════════════════════════════════════════════════
+🔄 Iteration 1/Infinity
+════════════════════════════════════════════════════════════
+🎯 Adding: Toggle / Switch
+🤖 Querying Qwen...
+Error: ENOENT: no such file or directory, open 'components/Toggle / Switch.tsx'
+    at async open (node:internal/fs/promises:637:25)
+    at async writeFile (node:internal/fs/promises:1239:14)
+    at async main (/Users/tanishqmacmini/projects/auto-uikit/runner.ts:228:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'components/Toggle / Switch.tsx'
+}
+📊 Running baseline eval...
+📊 Baseline: 147 points, 15 components
+
+════════════════════════════════════════════════════════════
+🔄 Iteration 1/Infinity
+════════════════════════════════════════════════════════════
+🎯 Adding: Toggle / Switch
+🤖 Querying Qwen...

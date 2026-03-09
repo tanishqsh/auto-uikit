@@ -1,0 +1,484 @@
+{
+  "timestamp": "2026-03-09T01:36:26.475Z",
+  "totalScore": 147,
+  "componentCount": 15,
+  "maxPossible": 195,
+  "components": [
+    {
+      "name": "Accordion",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 3,
+      "simplicity": 1,
+      "total": 9,
+      "lines": 76
+    },
+    {
+      "name": "Alert",
+      "compiles": 1,
+      "exports": 0,
+      "variants": 0,
+      "accessibility": 3,
+      "simplicity": 2,
+      "total": 6,
+      "lines": 68
+    },
+    {
+      "name": "Avatar",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 3,
+      "simplicity": 2,
+      "total": 10,
+      "lines": 51
+    },
+    {
+      "name": "Badge",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 2,
+      "simplicity": 2,
+      "total": 9,
+      "lines": 51
+    },
+    {
+      "name": "Breadcrumbs",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 2,
+      "simplicity": 0,
+      "total": 7,
+      "lines": 103
+    },
+    {
+      "name": "Button",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 2,
+      "simplicity": 2,
+      "total": 9,
+      "lines": 70
+    },
+    {
+      "name": "Card",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 2,
+      "simplicity": 2,
+      "total": 9,
+      "lines": 59
+    },
+    {
+      "name": "Dropdown",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 3,
+      "simplicity": 1,
+      "total": 9,
+      "lines": 74
+    },
+    {
+      "name": "Input",
+      "compiles": 1,
+      "exports": 0,
+      "variants": 0,
+      "accessibility": 3,
+      "simplicity": 2,
+      "total": 6,
+      "lines": 58
+    },
+    {
+      "name": "Modal",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 2,
+      "simplicity": 2,
+      "total": 9,
+      "lines": 49
+    },
+    {
+      "name": "ProgressBar",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 2,
+      "simplicity": 2,
+      "total": 9,
+      "lines": 66
+    },
+    {
+      "name": "Skeleton",
+      "compiles": 1,
+      "exports": 0,
+      "variants": 0,
+      "accessibility": 3,
+      "simplicity": 2,
+      "total": 6,
+      "lines": 60
+    },
+    {
+      "name": "Tabs",
+      "compiles": 1,
+      "exports": 0,
+      "variants": 0,
+      "accessibility": 2,
+      "simplicity": 2,
+      "total": 5,
+      "lines": 62
+    },
+    {
+      "name": "Toggle",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 2,
+      "simplicity": 2,
+      "total": 9,
+      "lines": 44
+    },
+    {
+      "name": "Tooltip",
+      "compiles": 1,
+      "exports": 0,
+      "variants": 0,
+      "accessibility": 2,
+      "simplicity": 2,
+      "total": 5,
+      "lines": 67
+    }
+  ],
+  "history": [
+    {
+      "iteration": 1,
+      "score": 11,
+      "status": "keep",
+      "description": "add Button"
+    },
+    {
+      "iteration": 2,
+      "score": 17,
+      "status": "keep",
+      "description": "add Input"
+    },
+    {
+      "iteration": 3,
+      "score": 27,
+      "status": "keep",
+      "description": "add Badge"
+    },
+    {
+      "iteration": 4,
+      "score": 38,
+      "status": "keep",
+      "description": "add Card"
+    },
+    {
+      "iteration": 5,
+      "score": 46,
+      "status": "keep",
+      "description": "add Alert"
+    },
+    {
+      "iteration": 6,
+      "score": 57,
+      "status": "keep",
+      "description": "add Avatar"
+    },
+    {
+      "iteration": 7,
+      "score": 68,
+      "status": "keep",
+      "description": "add Toggle"
+    },
+    {
+      "iteration": 8,
+      "score": 75,
+      "status": "keep",
+      "description": "add Tooltip"
+    },
+    {
+      "iteration": 9,
+      "score": 86,
+      "status": "keep",
+      "description": "add Modal"
+    },
+    {
+      "iteration": 10,
+      "score": 92,
+      "status": "keep",
+      "description": "add Tabs"
+    },
+    {
+      "iteration": 11,
+      "score": 103,
+      "status": "keep",
+      "description": "add Dropdown"
+    },
+    {
+      "iteration": 12,
+      "score": 114,
+      "status": "keep",
+      "description": "add ProgressBar"
+    },
+    {
+      "iteration": 13,
+      "score": 120,
+      "status": "keep",
+      "description": "add Skeleton"
+    },
+    {
+      "iteration": 14,
+      "score": 129,
+      "status": "keep",
+      "description": "add Breadcrumbs"
+    },
+    {
+      "iteration": 15,
+      "score": 139,
+      "status": "keep",
+      "description": "add Accordion"
+    },
+    {
+      "iteration": 16,
+      "score": 140,
+      "status": "keep",
+      "description": "improve Avatar"
+    },
+    {
+      "iteration": 17,
+      "score": 139,
+      "status": "discard",
+      "description": "improve ProgressBar — reverted"
+    },
+    {
+      "iteration": 18,
+      "score": 140,
+      "status": "discard",
+      "description": "improve ProgressBar — reverted"
+    },
+    {
+      "iteration": 19,
+      "score": 141,
+      "status": "keep",
+      "description": "improve Accordion"
+    },
+    {
+      "iteration": 20,
+      "score": 141,
+      "status": "discard",
+      "description": "improve Card — reverted"
+    },
+    {
+      "iteration": 21,
+      "score": 141,
+      "status": "discard",
+      "description": "improve Button — reverted"
+    },
+    {
+      "iteration": 22,
+      "score": 141,
+      "status": "discard",
+      "description": "improve Modal — reverted"
+    },
+    {
+      "iteration": 23,
+      "score": 143,
+      "status": "keep",
+      "description": "improve Input"
+    },
+    {
+      "iteration": 24,
+      "score": 144,
+      "status": "keep",
+      "description": "improve Skeleton"
+    },
+    {
+      "iteration": 25,
+      "score": 143,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 26,
+      "score": 143,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 27,
+      "score": 145,
+      "status": "keep",
+      "description": "improve Tabs"
+    },
+    {
+      "iteration": 28,
+      "score": 144,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 29,
+      "score": 144,
+      "status": "discard",
+      "description": "improve Alert — reverted"
+    },
+    {
+      "iteration": 30,
+      "score": 145,
+      "status": "keep",
+      "description": "improve Alert"
+    },
+    {
+      "iteration": 31,
+      "score": 145,
+      "status": "discard",
+      "description": "improve Alert — reverted"
+    },
+    {
+      "iteration": 32,
+      "score": 146,
+      "status": "keep",
+      "description": "improve Alert"
+    },
+    {
+      "iteration": 33,
+      "score": 144,
+      "status": "discard",
+      "description": "improve Alert — reverted"
+    },
+    {
+      "iteration": 34,
+      "score": 146,
+      "status": "discard",
+      "description": "improve Skeleton — reverted"
+    },
+    {
+      "iteration": 35,
+      "score": 146,
+      "status": "keep",
+      "description": "improve Skeleton"
+    },
+    {
+      "iteration": 36,
+      "score": 146,
+      "status": "discard",
+      "description": "improve Skeleton — reverted"
+    },
+    {
+      "iteration": 37,
+      "score": 146,
+      "status": "discard",
+      "description": "improve Skeleton — reverted"
+    },
+    {
+      "iteration": 38,
+      "score": 146,
+      "status": "discard",
+      "description": "improve Skeleton — reverted"
+    },
+    {
+      "iteration": 39,
+      "score": 146,
+      "status": "discard",
+      "description": "improve Skeleton — reverted"
+    },
+    {
+      "iteration": 40,
+      "score": 147,
+      "status": "keep",
+      "description": "improve Skeleton"
+    },
+    {
+      "iteration": 41,
+      "score": 146,
+      "status": "discard",
+      "description": "improve Skeleton — reverted"
+    },
+    {
+      "iteration": 42,
+      "score": 147,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 43,
+      "score": 147,
+      "status": "keep",
+      "description": "improve Tabs"
+    },
+    {
+      "iteration": 44,
+      "score": 146,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 45,
+      "score": 147,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 46,
+      "score": 147,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 47,
+      "score": 147,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 48,
+      "score": 147,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 49,
+      "score": 147,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 50,
+      "score": 147,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 51,
+      "score": 147,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 52,
+      "score": 147,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 53,
+      "score": 147,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    },
+    {
+      "iteration": 54,
+      "score": 147,
+      "status": "discard",
+      "description": "improve Tabs — reverted"
+    }
+  ]
+}

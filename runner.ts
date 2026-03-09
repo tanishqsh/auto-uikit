@@ -6,6 +6,7 @@
 import { readdir, readFile, writeFile, mkdir, appendFile } from "node:fs/promises";
 import { join } from "node:path";
 import { execSync } from "node:child_process";
+import { generateScores } from "./preview/scores.js";
 
 const MODEL = "qwen2.5-coder:7b";
 const OLLAMA_URL = "http://localhost:11434/api/generate";
@@ -260,6 +261,9 @@ Return ONLY the improved complete .tsx file. No explanations.`;
       await sendReport(i, currentScore, componentCount, totalKept, totalDiscarded);
       lastReportTime = Date.now();
     }
+
+    // Update scores.json for preview dashboard
+    try { await generateScores(); } catch {}
 
     // Cooldown to prevent memory pressure
     await sleep(COOLDOWN_MS);
