@@ -6,7 +6,7 @@
 
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { execSync } from "node:child_process";
+import { buildSync } from "esbuild";
 
 interface ComponentScore {
   name: string;
@@ -37,9 +37,13 @@ async function getComponentFiles(): Promise<string[]> {
 
 function checkCompiles(filePath: string): boolean {
   try {
-    execSync(`npx tsc --noEmit --jsx react-jsx --esModuleInterop --module esnext --moduleResolution bundler --strict ${filePath}`, {
-      stdio: "pipe",
-      timeout: 15000,
+    buildSync({
+      entryPoints: [filePath],
+      bundle: false,
+      write: false,
+      jsx: "automatic",
+      loader: { ".tsx": "tsx" },
+      logLevel: "silent",
     });
     return true;
   } catch {

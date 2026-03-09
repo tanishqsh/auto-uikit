@@ -11,7 +11,11 @@ const MODEL = "qwen2.5-coder:7b";
 const OLLAMA_URL = "http://localhost:11434/api/generate";
 const COMPONENTS_DIR = "components";
 const RESULTS_FILE = "results.tsv";
-const MAX_ITERATIONS = 100;
+const MAX_ITERATIONS = Infinity;
+const COOLDOWN_MS = 3000; // 3s between iterations to let memory settle
+const REPORT_INTERVAL_MS = 60 * 60 * 1000; // hourly
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || "";
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || "";
 
 // Target components in priority order
 const TARGET_COMPONENTS = [
@@ -79,6 +83,32 @@ async function logResult(commit: string, totalScore: number, status: string, des
   await appendFile(RESULTS_FILE, line);
 }
 
+async function sendReport(iteration: number, score: number, componentCount: number, kept: number, discarded: number) {
+  const msg = `🤖 *auto-uikit report*
+⏱ Iteration: ${iteration}
+📦 Components: ${componentCount}
+📊 Score: ${score}
+✅ Kept: ${kept} | ❌ Discarded: ${discarded}`;
+
+  // Try Telegram
+  if (TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID) {
+    try {
+      await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: msg, parse_mode: "Markdown" }),
+      });
+    } catch {}
+  }
+
+  // Always log to console
+  console.log(`\n📋 HOURLY REPORT\n${msg}\n`);
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
 function extractCodeBlock(response: string): string {
   // Extract code from markdown code blocks
   const match = response.match(/```(?:tsx|jsx|typescript|react)?\n([\s\S]*?)```/);
@@ -104,6 +134,9 @@ async function main() {
   const baseline = await runEval();
   console.log(`📊 Baseline: ${baseline.totalScore} points, ${baseline.componentCount} components`);
   let currentScore = baseline.totalScore;
+  let lastReportTime = Date.now();
+  let totalKept = 0;
+  let totalDiscarded = 0;
 
   for (let i = 1; i <= MAX_ITERATIONS; i++) {
     console.log(`\n${"═".repeat(60)}`);
@@ -178,25 +211,35 @@ Return ONLY the improved complete .tsx file. No explanations.`;
     console.log(`📊 Score: ${result.totalScore} (was ${currentScore})`);
 
     if (result.totalScore > currentScore) {
-      // Keep!
       console.log(`✅ KEEP (+${result.totalScore - currentScore})`);
       gitCommit(`${action}: ${targetComponent} (score ${currentScore} → ${result.totalScore})`);
       await logResult(getShortHash(), result.totalScore, "keep", `${action} ${targetComponent}`);
       currentScore = result.totalScore;
+      totalKept++;
     } else if (result.totalScore === currentScore && action === "add") {
-      // New component but same score — keep if it compiles
       console.log("🟡 KEEP (new component, same score)");
       gitCommit(`${action}: ${targetComponent} (score ${result.totalScore})`);
       await logResult(getShortHash(), result.totalScore, "keep", `${action} ${targetComponent} (no gain)`);
       currentScore = result.totalScore;
+      totalKept++;
     } else {
-      // Discard
       console.log(`❌ DISCARD (score dropped or no improvement)`);
       gitRevert();
       await logResult(getShortHash(), result.totalScore, "discard", `${action} ${targetComponent} — reverted`);
+      totalDiscarded++;
     }
 
-    console.log(`📈 Current: ${currentScore} points, ${(await getExistingComponents()).length} components`);
+    const componentCount = (await getExistingComponents()).length;
+    console.log(`📈 Current: ${currentScore} points, ${componentCount} components`);
+
+    // Hourly report
+    if (Date.now() - lastReportTime >= REPORT_INTERVAL_MS) {
+      await sendReport(i, currentScore, componentCount, totalKept, totalDiscarded);
+      lastReportTime = Date.now();
+    }
+
+    // Cooldown to prevent memory pressure
+    await sleep(COOLDOWN_MS);
   }
 
   console.log(`\n${"═".repeat(60)}`);
