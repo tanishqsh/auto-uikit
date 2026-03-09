@@ -22,3 +22,6 @@ c922d8f	139	keep	add Accordion
 290baa0	141	discard	improve Button — reverted
 290baa0	141	discard	improve Modal — reverted
 d8262ee	143	keep	improve Input
+441514a	144	keep	improve Skeleton
+441514a	143	discard	improve Tabs — reverted
+441514a	143	discard	improve Tabs — reverted

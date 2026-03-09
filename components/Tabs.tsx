@@ -37,6 +37,7 @@ const Tabs: React.FC<TabsProps> = ({ variant, size = 'medium', children }) => {
     <div
       className={`rounded-lg shadow-sm transition-all duration-200 ${getColor(variant)} ${getSize(size)}`}
       role="tablist"
+      aria-roledescription="Tabs navigation"
     >
       {children}
     </div>
