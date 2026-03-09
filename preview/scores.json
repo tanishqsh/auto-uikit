@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-03-09T04:13:52.542Z",
-  "totalScore": 299,
+  "timestamp": "2026-03-09T04:15:12.409Z",
+  "totalScore": 300,
   "componentCount": 30,
   "maxPossible": 390,
   "components": [
@@ -239,9 +239,9 @@
       "compiles": 1,
       "exports": 0,
       "variants": 0,
-      "accessibility": 2,
+      "accessibility": 3,
       "simplicity": 2,
-      "total": 5,
+      "total": 6,
       "lines": 62
     },
     {
@@ -1997,6 +1997,12 @@
       "score": 299,
       "status": "discard",
       "description": "improve RadioGroup — reverted"
+    },
+    {
+      "iteration": 283,
+      "score": 334,
+      "status": "keep",
+      "description": "improve[rewrite] Tabs"
     }
   ]
 }

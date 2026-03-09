@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface TooltipProps {
   variant: 'primary' | 'neutral' | 'danger' | 'success';
@@ -33,15 +33,18 @@ const Tooltip: React.FC<TooltipProps> = ({ variant, size = 'medium', children })
     }
   };
 
+  const [isShown, setIsShown] = useState(false);
+
   return (
-    <span className="relative">
+    <span className="relative" role="button" onClick={() => setIsShown(!isShown)} onKeyDown={(e) => e.key === 'Enter' && setIsShown(!isShown)} tabIndex={0}>
       {children}
       <div
         className={`absolute bottom-full left-1/2 transform -translate-x-1/2 mt-2 rounded-lg shadow-sm transition-all duration-200 ${getColor(
           variant
-        )} ${getSize(size)} hidden`}
+        )} ${getSize(size)} ${isShown ? 'block' : 'hidden'}`}
         role="tooltip"
         aria-label="Tooltip text"
+        aria-hidden={!isShown}
       >
         Tooltip text
       </div>
