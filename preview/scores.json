@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-03-09T01:42:48.813Z",
-  "totalScore": 248,
-  "componentCount": 26,
-  "maxPossible": 338,
+  "timestamp": "2026-03-09T01:43:13.648Z",
+  "totalScore": 259,
+  "componentCount": 27,
+  "maxPossible": 351,
   "components": [
     {
       "name": "Accordion",
@@ -193,6 +193,16 @@
       "simplicity": 2,
       "total": 9,
       "lines": 61
+    },
+    {
+      "name": "Stat",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 2,
+      "simplicity": 2,
+      "total": 9,
+      "lines": 67
     },
     {
       "name": "Stepper",
@@ -655,6 +665,12 @@
       "score": 248,
       "status": "keep",
       "description": "add AvatarGroup"
+    },
+    {
+      "iteration": 66,
+      "score": 259,
+      "status": "keep",
+      "description": "add Stat"
     }
   ]
 }
