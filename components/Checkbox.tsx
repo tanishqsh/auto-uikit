@@ -23,7 +23,17 @@ const Checkbox: React.FC<CheckboxProps> = ({ variant = 'primary', size = 'md', c
   }[size];
 
   return (
-    <label className={`inline-flex items-center ${sizeClass} cursor-pointer ${colorClass}`} role="checkbox" aria-checked={checked}>
+    <label
+      className={`inline-flex items-center ${sizeClass} cursor-pointer ${colorClass}`}
+      role="checkbox"
+      aria-checked={checked}
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          setChecked(!checked);
+        }
+      }}
+    >
       <input
         type="checkbox"
         checked={checked}
