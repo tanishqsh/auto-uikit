@@ -137,10 +137,13 @@ function sleep(ms: number): Promise<void> {
 }
 
 function fixCommonQwenBugs(code: string): string {
-  return code.replace(
+  let fixed = code.replace(
     /className=\{(`[^`]*`)\s*\n(\s*)(role=|aria-|onClick|onKey|tabIndex|id=|style=)/g,
     'className={$1}\n$2$3'
   );
+  // Strip any external package imports (only react is allowed)
+  fixed = fixed.replace(/^import\s+.*from\s+['"](?!react['"]|\.\/|\.\.\/)[^'"]+['"];?\s*$/gm, "// [removed: external import]");
+  return fixed;
 }
 
 function extractCodeBlock(response: string): string {

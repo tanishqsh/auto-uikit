@@ -430,3 +430,46 @@
 12:37:58 AM [vite] (client) hmr update /preview/main.tsx, /preview/styles.css
 12:37:59 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
 12:37:59 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:38:33 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:38:33 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:38:35 AM [vite] Internal server error: Failed to resolve import "react-tailwindcss-avatar" from "components/AvatarGroup.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/tanishqmacmini/projects/auto-uikit/components/AvatarGroup.tsx:2:23
+  1  |  import { jsxDEV } from "react/jsx-dev-runtime";
+  2  |  import React from "react";
+  3  |  import { Avatar } from "react-tailwindcss-avatar";
+     |                          ^
+  4  |  const AvatarGroup = ({ variant, size = "md", children }) => {
+  5  |    const getColorClass = (variant2) => {
+      at TransformPluginContext._formatLog (file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:28999:43)
+      at TransformPluginContext.error (file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:28996:14)
+      at normalizeUrl (file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:27119:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:27177:32
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:27145:4)
+      at async EnvironmentPluginContainer.transform (file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:28797:14)
+      at async loadAndTransform (file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:22670:26)
+      at async viteTransformMiddleware (file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:24542:20)
+12:38:46 AM [vite] Internal server error: Failed to resolve import "react-tailwindcss-avatar" from "components/AvatarGroup.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/tanishqmacmini/projects/auto-uikit/components/AvatarGroup.tsx:2:23
+  1  |  import { jsxDEV } from "react/jsx-dev-runtime";
+  2  |  import React from "react";
+  3  |  import { Avatar } from "react-tailwindcss-avatar";
+     |                          ^
+  4  |  const AvatarGroup = ({ variant, size = "md", children }) => {
+  5  |    const getColorClass = (variant2) => {
+      at TransformPluginContext._formatLog (file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:28999:43)
+      at TransformPluginContext.error (file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:28996:14)
+      at normalizeUrl (file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:27119:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:27177:32
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:27145:4)
+      at async EnvironmentPluginContainer.transform (file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:28797:14)
+      at async loadAndTransform (file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:22670:26)
+      at async viteTransformMiddleware (file:///Users/tanishqmacmini/projects/auto-uikit/node_modules/vite/dist/node/chunks/config.js:24542:20)
+12:39:13 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
+12:39:13 AM [vite] (client) hmr update /preview/main.tsx, /preview/styles.css
+12:39:13 AM [vite] (client) hmr update /components/Alert.tsx, /preview/styles.css
