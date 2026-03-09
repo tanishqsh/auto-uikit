@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-03-09T01:41:00.386Z",
-  "totalScore": 212,
-  "componentCount": 22,
-  "maxPossible": 286,
+  "timestamp": "2026-03-09T01:41:19.579Z",
+  "totalScore": 223,
+  "componentCount": 23,
+  "maxPossible": 299,
   "components": [
     {
       "name": "Accordion",
@@ -153,6 +153,16 @@
       "simplicity": 2,
       "total": 6,
       "lines": 60
+    },
+    {
+      "name": "Slider",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 2,
+      "simplicity": 2,
+      "total": 9,
+      "lines": 42
     },
     {
       "name": "Spinner",
@@ -591,6 +601,12 @@
       "score": 212,
       "status": "keep",
       "description": "add Textarea"
+    },
+    {
+      "iteration": 62,
+      "score": 223,
+      "status": "keep",
+      "description": "add Slider"
     }
   ]
 }
