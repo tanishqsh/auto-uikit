@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-03-09T01:40:05.021Z",
-  "totalScore": 191,
-  "componentCount": 20,
-  "maxPossible": 260,
+  "timestamp": "2026-03-09T01:40:33.739Z",
+  "totalScore": 202,
+  "componentCount": 21,
+  "maxPossible": 273,
   "components": [
     {
       "name": "Accordion",
@@ -173,6 +173,16 @@
       "simplicity": 2,
       "total": 5,
       "lines": 62
+    },
+    {
+      "name": "Tag",
+      "compiles": 1,
+      "exports": 1,
+      "variants": 3,
+      "accessibility": 2,
+      "simplicity": 2,
+      "total": 9,
+      "lines": 66
     },
     {
       "name": "Toast",
@@ -559,6 +569,12 @@
       "score": 191,
       "status": "keep",
       "description": "add Divider"
+    },
+    {
+      "iteration": 60,
+      "score": 202,
+      "status": "keep",
+      "description": "add Tag"
     }
   ]
 }
