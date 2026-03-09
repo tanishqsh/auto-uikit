@@ -2791,3 +2791,23 @@ Error: ENOENT: no such file or directory, open 'components/Toggle / Switch.tsx'
 ════════════════════════════════════════════════════════════
 🎯 Improving: RadioGroup
 🤖 Querying Qwen...
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+Error: Transform failed with 1 error:
+/Users/tanishqmacmini/projects/auto-uikit/runner.ts:166:74: ERROR: Expected ")" but found "') && !code.includes('"
+    at failureErrorWithLog (/Users/tanishqmacmini/projects/auto-uikit/node_modules/esbuild/lib/main.js:1467:15)
+    at /Users/tanishqmacmini/projects/auto-uikit/node_modules/esbuild/lib/main.js:736:50
+    at responseCallbacks.<computed> (/Users/tanishqmacmini/projects/auto-uikit/node_modules/esbuild/lib/main.js:603:9)
+    at handleIncomingPacket (/Users/tanishqmacmini/projects/auto-uikit/node_modules/esbuild/lib/main.js:658:12)
+    at Socket.readFromStdout (/Users/tanishqmacmini/projects/auto-uikit/node_modules/esbuild/lib/main.js:581:7)
+    at Socket.emit (node:events:508:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Readable.push (node:internal/streams/readable:390:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23) {
+  name: 'TransformError'
+}
+
+Node.js v24.13.0

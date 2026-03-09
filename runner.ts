@@ -5,6 +5,7 @@
  */
 
 import { readdir, readFile, writeFile, mkdir, appendFile } from "node:fs/promises";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { execSync } from "node:child_process";
 import { generateScores } from "./preview/scores.js";
@@ -75,20 +76,20 @@ async function runEval(): Promise<{ totalScore: number; componentCount: number; 
     const scoreMatch = output.match(/^total_score:\s*(\d+)/m);
     const countMatch = output.match(/^component_count:\s*(\d+)/m);
 
-    // Parse individual component scores
+    // Parse individual component scores (11 columns: name comp exp var a11y simp anim dark intv total lines)
     const scores: EvalScores = {};
     const lines = output.split("\n");
     for (const line of lines) {
       const parts = line.trim().split(/\s+/);
-      if (parts.length >= 8) {
+      if (parts.length >= 11) {
         const name = parts[0];
         const compiles = parseInt(parts[1]);
         const exports = parseInt(parts[2]);
         const variants = parseInt(parts[3]);
         const accessibility = parseInt(parts[4]);
         const simplicity = parseInt(parts[5]);
-        const total = parseInt(parts[6]);
-        const lineCount = parseInt(parts[7]);
+        const total = parseInt(parts[9]);
+        const lineCount = parseInt(parts[10]);
         if (!isNaN(total) && !isNaN(compiles)) {
           scores[name] = { compiles, exports, variants, accessibility, simplicity, total, lines: lineCount };
         }
@@ -151,29 +152,25 @@ function extractCodeBlock(response: string): string {
 
 // ─── Browser Render Testing ───
 function browserRenderTest(componentName: string): { renders: boolean; errors: string[] } {
-  // Use a lightweight check: try to import and verify JSX structure
   try {
-    const code = execSync(
-      `node -e "
-        const fs = require('fs');
-        const code = fs.readFileSync('components/${componentName}.tsx', 'utf-8');
-        // Check for common render issues
-        const issues = [];
-        if (!code.includes('return')) issues.push('no-return');
-        if (code.includes('undefined(')) issues.push('undefined-call');
-        if ((code.match(/\\(/g)||[]).length !== (code.match(/\\)/g)||[]).length) issues.push('unbalanced-parens');
-        if ((code.match(/\\{/g)||[]).length !== (code.match(/\\}/g)||[]).length) issues.push('unbalanced-braces');
-        if (code.includes('className={') && !code.includes('className={\\`') && !code.includes('className={\"') && !code.includes('className={\\x27') && !code.includes('className={clsx') && !code.includes('className={cn') && !code.includes('className={props') && !code.includes('className={\\$') && !code.includes('className={variant')) {
-          // complex className check — skip, too noisy
-        }
-        console.log(JSON.stringify({ ok: issues.length === 0, issues }));
-      "`,
-      { encoding: "utf-8", timeout: 5000 }
-    );
-    const result = JSON.parse(code.trim());
-    return { renders: result.ok, errors: result.issues };
+    const filePath = join(COMPONENTS_DIR, `${componentName}.tsx`);
+    const code = readFileSync(filePath, "utf-8");
+    const issues: string[] = [];
+
+    if (!code.includes("return")) issues.push("no-return");
+    if (code.includes("undefined(")) issues.push("undefined-call");
+
+    const openParens = (code.match(/\(/g) || []).length;
+    const closeParens = (code.match(/\)/g) || []).length;
+    if (openParens !== closeParens) issues.push("unbalanced-parens");
+
+    const openBraces = (code.match(/\{/g) || []).length;
+    const closeBraces = (code.match(/\}/g) || []).length;
+    if (openBraces !== closeBraces) issues.push("unbalanced-braces");
+
+    return { renders: issues.length === 0, errors: issues };
   } catch {
-    return { renders: true, errors: [] }; // don't block on check failure
+    return { renders: true, errors: [] };
   }
 }
 
