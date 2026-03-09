@@ -17,12 +17,19 @@ const REPORT_INTERVAL_MS = 60 * 60 * 1000; // hourly
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || "";
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || "";
 
-// Target components in priority order
-const TARGET_COMPONENTS = [
-  "Button", "Input", "Badge", "Card", "Alert", "Avatar",
-  "Toggle", "Tooltip", "Modal", "Tabs", "Dropdown", "ProgressBar",
-  "Skeleton", "Breadcrumbs", "Accordion",
-];
+// Target components — read from program.md at startup + every iteration
+async function getTargetComponents(): Promise<string[]> {
+  try {
+    const content = await readFile("program.md", "utf-8");
+    const listSection = content.match(/## Target Components[\s\S]*?\n([\s\S]*?)(?=\n##|$)/);
+    if (!listSection) return [];
+    const items = listSection[1].match(/^\d+\.\s+(.+)/gm);
+    if (!items) return [];
+    return items.map((item) => item.replace(/^\d+\.\s+/, "").split(/\s*[\(–—]/)[0].trim());
+  } catch {
+    return [];
+  }
+}
 
 async function queryQwen(prompt: string): Promise<string> {
   const res = await fetch(OLLAMA_URL, {
@@ -144,7 +151,8 @@ async function main() {
     console.log(`${"═".repeat(60)}`);
 
     const existing = await getExistingComponents();
-    const missing = TARGET_COMPONENTS.filter((c) => !existing.includes(c));
+    const targetComponents = await getTargetComponents();
+    const missing = targetComponents.filter((c) => !existing.includes(c));
 
     let action: string;
     let targetComponent: string;
