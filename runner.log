@@ -242,3 +242,12 @@ Error: ENOENT: no such file or directory, open 'components/Toggle / Switch.tsx'
 ════════════════════════════════════════════════════════════
 🎯 Adding: Toggle / Switch
 🤖 Querying Qwen...
+Error: ENOENT: no such file or directory, open 'components/Toggle / Switch.tsx'
+    at async open (node:internal/fs/promises:637:25)
+    at async writeFile (node:internal/fs/promises:1239:14)
+    at async main (/Users/tanishqmacmini/projects/auto-uikit/runner.ts:229:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'components/Toggle / Switch.tsx'
+}

@@ -63,15 +63,30 @@ Total kit score: sum of all component scores + (component_count * 2 bonus)
 4. Card (basic, with header/footer)
 5. Alert (info, warning, error, success)
 6. Avatar (image, initials, sizes)
-7. Toggle / Switch
-8. Tooltip
-9. Modal / Dialog
-10. Tabs
-11. Dropdown / Select
-12. Progress Bar
-13. Skeleton loader
-14. Breadcrumbs
-15. Accordion
+7. Toggle (switch on/off)
+8. Tooltip (hover to reveal)
+9. Modal (dialog overlay)
+10. Tabs (switchable panels)
+11. Dropdown (select menu)
+12. ProgressBar (determinate progress)
+13. Skeleton (loading placeholder)
+14. Breadcrumbs (navigation trail)
+15. Accordion (expandable sections)
+16. Checkbox (with label, indeterminate)
+17. RadioGroup (grouped radio buttons)
+18. Toast (notification popup)
+19. Spinner (loading indicator)
+20. Divider (horizontal/vertical separator)
+21. Tag (removable, colored)
+22. Textarea (multiline input)
+23. Slider (range input)
+24. Stepper (numbered steps)
+25. Pagination (page navigation)
+26. AvatarGroup (stacked avatars)
+27. Stat (metric display with label)
+28. EmptyState (placeholder illustration)
+29. KBD (keyboard shortcut display)
+30. Timeline (vertical event list)
 
 ## Style Guide
 
